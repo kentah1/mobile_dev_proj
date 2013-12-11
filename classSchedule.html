@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>FLC Schedule</title>
+		<link rel="stylesheet" href="themes/FLC.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>
+	//get the student information file
+	 var studentInfo;
+	$.getJSON( "Students.json", function(data) {
+    studentInfo = data.students;
+    })
+    .fail(function() {
+    alert( "Error getting student file" );
+    })
+    //get the class schedule file
+	var classInfo;
+	$.getJSON( "ClassSchedule.json", function(data) {
+    classInfo = data.subjects;
+    })
+    .fail(function() {
+	alert( "Error getting class schedule file" );
+    })
+	//get the courses for the logged in user
+	function getSchedule () {
+		//get an array containing the course numbers for the student
+		var studentName = localStorage.getItem("studentID");
+		//find index to the student ID in the JSON file
+        var indexID = getObjectKeyIndex(studentInfo, "studentID", studentName);
+		if(indexID) {		
+        //have the student, now get the array containing the courses
+    		var classNumArray = studentInfo[indexID].classNums;
+	    	//have the array, now cycle thru it getting the details from the class schedule
+			var cell = [];
+			var row = 1;
+			var madeTable = false;
+		    for (key in classNumArray) {
+    	        var indexID = getObjectKeyIndex(classInfo, "classNum", classNumArray[key]);
+			    //if we matched the course in the student info to a class in the course info, then display it
+			    if(indexID) {
+					//we know we have at least one class, so we can put out the table to display the courses
+					if (!madeTable) {
+						var classTable = createTable();
+						var madeTable = true;
+					}
+					//build the table elements
+					var tr = classTable.appendChild(document.createElement('tr'));  //add first row
+					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
+					cell[key * row].innerHTML = classInfo[indexID].subject + " - " + classInfo[indexID].title;
+					row++;
+					var tr = classTable.appendChild(document.createElement('tr'));  //add second row
+					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
+					cell[key * row].innerHTML = "Building: "+String.trim(classInfo[indexID].building) + ",&nbsp;  " + classInfo[indexID].days + "&nbsp;   " + classInfo[indexID].time;
+					var tr = classTable.appendChild(document.createElement('tr'));  //add third row
+                    tr.setAttribute("class", "table-line");
+					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
+					cell[key * row].innerHTML = "Instructor: "+classInfo[indexID].instructor + ",&nbsp;  " + "Class number: " +classInfo[indexID].classNum + ",&nbsp;   " + "Units: " + classInfo[indexID].units;
+				    
+					var element=document.getElementById("classList");
+                    element.appendChild(classTable);  // put in the html	
+			    }
+				
+		    }
+		} else {
+			alert("No courses found for student");
+		}
+					
+	}
+//get the index to the desired key
+function getObjectKeyIndex(obj, keyToFind, valToFind) {
+    var i = 0, key;
+    for (key in obj) {
+		//if the value of the JSON object is the same as the desired value, return the key index value
+        if (obj[key][keyToFind] == valToFind) {
+            return key;
+        }
+        i++;
+    }
+    return null;
+}
+function createTable() {
+    classTable = document.createElement('table');
+	classTable.setAttribute("id", "cTable");//put in css
+	//classTable.setAttribute("border", "2px");
+	classTable.setAttribute("align", "center");
+	classTable.setAttribute("class", "table-stripe");
+	classTable.setAttribute("border-spacing", "0");
+    classTable.setAttribute("border-collapse", "collapse");
+	return classTable;	
+}
+</script>
+</head>
+<body onLoad="getSchedule()">
+		<div data-role="page" data-theme="a">
+			<div data-role="header" data-position="fixed">
+            				 <div class="hlogo">FLC Info </div>
+
+				<h1>Class Schedule</h1>
+			</div>
+		
+        <div id="classList">
+        </div>
+		
+        </div>
+	</body>
+</html>
