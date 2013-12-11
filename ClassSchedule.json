@@ -1,0 +1,102 @@
+{ "subjects": [
+    {
+        "subject": "CISP 300",
+        "title": "Algorithm Design/Problem Solving  ",
+        "building": "FL5 ",
+        "room": "109",
+        "instructor": "C. Fowler",
+        "days": "T",
+        "time": "01:00pm - 04:05pm",
+        "classNum": "19330",
+        "units": "3"
+    },
+    {
+        "subject": "CISP 300",
+        "title": "Algorithm Design/Problem Solving  ",
+        "building": "FL1 ",
+        "room": "104",
+        "instructor": "D. Cooper",
+        "days": "W",
+        "time": "06:00pm - 09:05pm",
+        "classNum": "15735",
+        "units": "3"
+    },
+    {
+        "subject": "CISP 352",
+        "title": "Intermediate SQL    ONLINE ",
+        "building": "ONLINE",
+        "room": "",
+        "instructor": "D. Cooper",
+        "days": "Online * ",
+        "time": "",
+        "classNum": "19331",
+        "units": "3"
+    },
+    {
+        "subject": "CISP 360",
+        "title": "Introduction to Structured Programming C on LINUX  ",
+        "building": "",
+        "room": "ONLINE",
+        "instructor": "D. Cooper",
+        "days": "Online * ",
+        "time": "",
+        "classNum": "15424",
+        "units": "4"
+    },
+    {
+        "subject": "CISP 363",
+        "title": "Programming for Mobile Devices II  ",
+        "building": "FL5 ",
+        "room": "9",
+        "instructor": "C. Fowler",
+        "days": "T",
+        "time": "07:00pm - 10:05pm",
+        "classNum": "19332",
+        "units": "4"
+    },
+    {
+        "subject": "CISP 370",
+        "title": "Beginning Visual Basic VB.NET    ONLINE ",
+        "building": "ONLINE",
+        "room": "",
+        "instructor": "D. Cooper",
+        "days": "Online * ",
+        "time": " ",
+        "classNum": "15425",
+        "units": "4"
+    },
+    {
+        "subject": "CISP 401",
+        "title": "Object Oriented Programming with Java ",
+        "building": "FL2 ",
+        "room": "153",
+        "instructor": "C. Fowler",
+        "days": "W",
+        "time": "06:00pm - 10:05pm",
+        "classNum": "16121",
+        "units": "4"
+    },
+    {
+        "subject": "CISP 430",
+        "title": "Data Structures ",
+        "building": "FL5 ",
+        "room": "11",
+        "instructor": "D. Ross",
+        "days": "Th",
+        "time": "06:00pm - 08:05pm",
+        "classNum": "19334",
+        "units": "4"
+    },
+    {
+        "subject": "CISP 430",
+        "title": "Data Structures  ",
+        "building": "ONLINE",
+        "room": "",
+        "instructor": "D. Ross",
+        "days": "Online * ",
+        "time": " ",
+        "classNum": "19334",
+        "units": "4"
+    }
+]
+}

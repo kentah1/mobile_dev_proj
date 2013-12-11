@@ -1,0 +1,424 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>FLC Schedule</title>
+		<link rel="stylesheet" href="themes/FLC.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <form name="aspnetForm" method="post" action="http://dcs.losrios.edu/dcs_classsearch.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODU2NDI5Mjg5D2QWAmYPZBYCAgMPZBYCAgEPZBYEAgMPZBYQAgEPEA8WAh4LXyFEYXRhQm91bmRnZBAVAglGYWxsIDIwMTMLU3ByaW5nIDIwMTQVAgQxMTM5BDExNDMUKwMCZ2dkZAIFDxAPFgIfAGdkEBUGDC0tIFNFTEVDVCAtLQNBbGwWQW1lcmljYW4gUml2ZXIgQ29sbGVnZRZDb3N1bW5lcyBSaXZlciBDb2xsZWdlE0ZvbHNvbSBMYWtlIENvbGxlZ2UXU2FjcmFtZW50byBDaXR5IENvbGxlZ2UVBgADQWxsA0FSQwNDUkMDRkxDA1NDQxQrAwZnZ2dnZ2cWAWZkAgkPEA8WAh8AZ2QQFaUBDC0tIFNFTEVDVCAtLRFBY2NvdW50aW5nIChBQ0NUKSBBZG1pbmlzdHJhdGlvbiBvZiBKdXN0aWNlIChBRE1KKRJBZXJvbmF1dGljcyAoQUVSTykaQWdyaWN1bHR1cmUgQnVzaW5lc3MgKEFHQikmQWlyIFRyYWZmaWMgQ250ci9BaXJjcmFmdCBEaXNwIChBVENBRCkSQWxsaWVkIEhlYWx0aCAoQUgpFUFuaW1hbCBTY2llbmNlIChBTlNDKRNBbnRocm9wb2xvZ3kgKEFOVEgpD0FyYWJpYyAoQVJBQklDKR9BcmNoaXRlY3R1cmFsIERlc2lnbiBUZWNoIChBRFQpE0FyY2hpdGVjdHVyZSAoQVJDSCkJQXJ0IChBUlQpEkFydCBIaXN0b3J5IChBUlRIKRVBcnQgTmV3IE1lZGlhIChBUlROTSkXQXJ0IFBob3RvZ3JhcGh5IChBUlRQSCkQQXN0cm9ub215IChBU1RSKR9BdXRvIENvbGxpc2lvbiBUZWNobm9sb2d5IChBQ1QpH0F1dG9tb3RpdmUgTWVjaGFuaWNzIFRlY2ggKEFNVCkaQXV0b21vdGl2ZSBUZWNobm9sb2d5IChBVCkOQmlvbG9neSAoQklPTCkUQmlvdGVjaG5vbG9neSAoQklPVCkkQnVpbGRpbmcgSW5zcGVjdGlvbiBUZWNobm9sb2d5IChCSVQpDkJ1c2luZXNzIChCVVMpHEJ1c2luZXNzIFRlY2hub2xvZ3kgKEJVU1RFQykfQ2FsaWZvcm5pYSBIaWdod2F5IFBhdHJvbCAoQ0hQKRBDYW50b25lc2UgKENBTlQpIUNhcnBlbnRlcnMgQXBwcmVudGljZXNoaXAgKENBUlBUKRBDaGVtaXN0cnkgKENIRU0pHENvbW11bmljYXRpb24gU3R1ZGllcyAoQ09NTSkbQ29tbXVuaWNhdGlvbnMgTWVkaWEgKENNRUQpHENvbW11bml0eSBMZWFkZXJzaGlwIChDT01ERSkjQ29tcHV0ZXIgSW5mbyBTY2kgLSBTZWN1cml0eSAoQ0lTUykjQ29tcHV0ZXIgSW5mbyBTY2llbmNlIC0gQXBwcyAoQ0lTQSkjQ29tcHV0ZXIgSW5mbyBTY2llbmNlIC0gQ29yZSAoQ0lTQykiQ29tcHV0ZXIgSW5mbyBTY2llbmNlIC0gV2ViIChDSVNXKSVDb21wdXRlciBJbmZvIFNjaWVuY2UgLVByb2dyYW0gKENJU1ApJENvbXB1dGVyIEluZm8gU2NpZW5jZS1OZXR3b3JrIChDSVNOKRRDb25zdHJ1Y3Rpb24gKENPTlNUKSJDb25zdHJ1Y3Rpb24gTWFuYWdlbWVudCBUZWNoIChDTVQpEkNvc21ldG9sb2d5IChDT1NNKR5DdWxpbmFyeSBBcnRzIE1hbmFnZW1lbnQgKENBTSkXRGVudGFsIEFzc2lzdGluZyAoREFTVCkVRGVudGFsIEh5Z2llbmUgKERIWUcpGURlc2lnbiBUZWNobm9sb2d5IChERVNHTiklRGlhZ25vc3RpYyBNZWRpY2FsIFNvbm9ncmFwaHkgKFNPTk9HKSVEaWVzZWwvQ2xlYW4gRGllc2VsIFRlY2hub2xvZ3kgKERDRFQpF0RyeXdhbGwvbGF0aGluZyAoRFJMVEgpH0Vhcmx5IENoaWxkaG9vZCBFZHVjYXRpb24gKEVDRSkQRWNvbm9taWNzIChFQ09OKSNFbGVjdHJpY2lhbnMgQXBwcmVudGljZXNoaXAgKEVMRUNUKRtFbGVjdHJvbmljcyBUZWNobm9sb2d5IChFVCkiRW1lcmdlbmN5IE1lZGljYWwgVGVjaG5vbG9neSAoRU1UKQ9FbmVyZ3kgKEVORVJHWSkSRW5naW5lZXJpbmcgKEVOR1IpHUVuZ2luZWVyaW5nIERlc2lnbiBUZWNoIChFRFQpIkVuZ2xpc2ggLSBDcmVhdGl2ZSBXcml0aW5nIChFTkdDVykbRW5nbGlzaCAtIEVkdWNhdGlvbiAoRU5HRUQpHEVuZ2xpc2ggLSBMYWJvcmF0b3J5IChFTkdMQikcRW5nbGlzaCAtIExpdGVyYXR1cmUgKEVOR0xUKRlFbmdsaXNoIC0gUmVhZGluZyAoRU5HUkQpGUVuZ2xpc2ggLSBXcml0aW5nIChFTkdXUikfRW52aXJvbm1lbnRhbCBUZWNobm9sb2d5IChFTlZUKSRFU0wgLSBFbmdsaXNoIGFzIGEgU2Vjb25kIExhbmcgKEVTTCkURVNMIC0gR3JhbW1hciAoRVNMRykWRVNMIC0gTGlzdGVuaW5nIChFU0xMKRpFU0wgLSBQcm9udW5jaWF0aW9uIChFU0xQKRRFU0wgLSBSZWFkaW5nIChFU0xSKRRFU0wgLSBXcml0aW5nIChFU0xXKSFGYW1pbHkgYW5kIENvbnN1bWVyIFNjaWVuY2UgKEZDUykPRmFzaGlvbiAoRkFTSE4pHEZpbG0gYW5kIE1lZGlhIFN0dWRpZXMgKEZNUykURmlyZSBUZWNobm9sb2d5IChGVCkbRmlyZSBUcmFpbmluZyBDZW50ZXIgKEZJUkUpGUZsaWdodCBUZWNobm9sb2d5IChGTFRFQykNRnJlbmNoIChGUkVOKR9GdW5lcmFsIFNlcnZpY2UgRWR1Y2F0aW9uIChGU0UpEEdlb2dyYXBoeSAoR0VPRykOR2VvbG9neSAoR0VPTCkNR2VybWFuIChHRVJNKRNHZXJvbnRvbG9neSAoR0VST04pHEdyYXBoaWMgQ29tbXVuaWNhdGlvbiAoR0NPTSkVSGVhbHRoIENhcmUgSVQgKEhDSVQpF0hlYWx0aCBFZHVjYXRpb24gKEhFRUQpI0hlYWx0aCBJbmZvcm1hdGlvbiBUZWNobm9sb2d5IChISVQpHUhlYWx0aGNhcmUgSW50ZXJwcmV0aW5nIChIQ0kpDkhpc3RvcnkgKEhJU1QpF0hvbWVsYW5kIFNlY3VyaXR5IChITFMpE0hvcnRpY3VsdHVyZSAoSE9SVCkbSG9zcGl0YWxpdHkgTWFuYWdlbWVudCAoSE0pHkh1bWFuIENhcmVlciBEZXZlbG9wbWVudCAoSENEKRVIdW1hbiBTZXJ2aWNlcyAoSFNFUikQSHVtYW5pdGllcyAoSFVNKSFJbnRlcmRpc2NpcGxpbmFyeSBTdHVkaWVzIChJTkRJUykWSW50ZXJpb3IgRGVzaWduIChJREVTKRFJcm9uIFdvcmtlcnMgKElXKQ5JdGFsaWFuIChJVEFMKRBKYXBhbmVzZSAoSkFQQU4pEUpvdXJuYWxpc20gKEpPVVIpE0tpbmVzaW9sb2d5IChLSU5FUykPS29yZWFuIChLT1JFQU4pHExlYXJuIFR1dG9yIEFjYWQgVGVjaCAoTFRBVCkUTGVnYWwgQXNzaXN0aW5nIChMQSkOTGlicmFyeSAoTElCUikZTGlicmFyeSBUZWNobm9sb2d5IChMSUJUKRFNYW5hZ2VtZW50IChNR01UKQ9NYW5kYXJpbiAoTUFORCkPTWFya2V0aW5nIChNS1QpEk1hdGhlbWF0aWNzIChNQVRIKSBNZWNoYW5pY2FsIEVsZWN0cmljYWwgVGVjaCAoTUVUKRhNZWRpY2FsIEFzc2lzdGluZyAoTUVEQSktTXVzaWM6IEluc3RydW1lbnRhbC9Wb2ljZSBJbnN0cnVjdGlvbiAoTVVJVkkpME11c2ljOiBNdXNpYyBGdW5kYW1lbnRhbHMsIEhpc3RvcnkgJiBMaXQgKE1VRkhMKR5NdXNpYzogTXVzaWMgUGVyZm9ybWFuY2UgKE1VUCkmTXVzaWM6IFNwZWNpYWxpemF0aW9ucyBpbiBNdXNpYyAoTVVTTSkYTmF0dXJhbCBSZXNvdXJjZXMgKE5BVFIpD051cnNpbmcgKE5VUlNFKRtOdXRyaXRpb24gYW5kIEZvb2RzIChOVVRSSSkkT2NjdXBhdGlvbmFsIFRoZXJhcHkgQXNzaXN0YW50IChPVEEpEVBhcmFtZWRpY3MgKFBNRUQpJlBFOiBBZGFwdGVkIFBoeXNpY2FsIEVkdWNhdGlvbiAoQURBUFQpEVBFOiBEYW5jZSAoREFOQ0UpE1BFOiBGaXRuZXNzIChGSVROUykeUEU6IFBlcnNvbmFsIEFjdGl2aXRpZXMgKFBBQ1QpElBFOiBTcG9ydHMgKFNQT1JUKRtQRTogVGVhbSBBY3Rpdml0aWVzIChUTUFDVCkQUGVyc2lhbiAoUFJTSUFOKRtQaGFybWFjeSBUZWNobm9sb2d5IChQSEFSTSkRUGhpbG9zb3BoeSAoUEhJTCkTUGhvdG9ncmFwaHkgKFBIT1RPKSJQaHlzaWNhbCBUaGVyYXBpc3QgQXNzaXN0YW50IChQVEEpDlBoeXNpY3MgKFBIWVMpGFBvbGl0aWNhbCBTY2llbmNlIChQT0xTKRpQcmUtQXBwcmVudGljZXNoaXAgKFBSRUFQKRtQcm9qZWN0IE1hbmFnZW1lbnQgKFBSSk1HVCkVUHJvcGVydHkgVGF4IChQUk9QVFgpEVBzeWNob2xvZ3kgKFBTWUMpJFB1YmxpYyBTYWZldHkgVHJhaW5pbmcgQ2VudGVyIChQU1RDKSVSYWRpbywgVFYsIGFuZCBGaWxtIFByb2R1Y3Rpb24gKFJUVkYpG1JhaWxyb2FkIE9wZXJhdGlvbnMgKFJBSUxSKRBSZWFsIEVzdGF0ZSAoUkUpEVJlY3JlYXRpb24gKFJFQ1IpFVJlc3BpcmF0b3J5IENhcmUgKFJDKQ5SdXNzaWFuIChSVVNTKSRTYWNvIFJlZ2lvbmFsIENoYXBsYWlucycgUHJvZyAoU1JDUCkiU2FjcmFtZW50byBQb2xpY2UgRGVwYXJ0bWVudCAoU1BEKSFTaGVldCBNZXRhbCBBcHByZW50aWNlc2hpcCAoU0hNRSkiU2lnbiBMYW5ndWFnZSBJbnRlcnByZXRpbmcgKElOVFJQKRxTaWduIExhbmd1YWdlIFN0dWRpZXMgKFNJTEEpFlNvY2lhbCBTY2llbmNlIChTT0NTQykPU29jaW9sb2d5IChTT0MpDlNwYW5pc2ggKFNQQU4pD1NwZWVjaCAoU1BFRUNIKSBTcGVlY2gtTGFuZ3VhZ2UgUGF0aG9sb2d5IChTTFBBKRFTdGF0aXN0aWNzIChTVEFUKRlTdHVkZW50IEdvdmVybm1lbnQgKFNHVlQpDlRhZ2Fsb2cgKFRHTEcpIVRlY2huaWNhbCBDb21tdW5pY2F0aW9ucyAoVEVDQ09NKRFUaGVhdHJlIEFydHMgKFRBKR5UaGVhdHJlIEFydHMgUGVyZm9ybWFuY2UgKFRBUCkaVmV0ZXJpbmFyeSBUZWNobm9sb2d5IChWVCkRVmlldG5hbWVzZSAoVklFVCkXVm9jYXRpb25hbCBOdXJzaW5nIChWTikOV2VsZGluZyAoV0VMRCkWV29yayBFeHBlcmllbmNlIChXRVhQKRWlAQAEQUNDVARBRE1KBEFFUk8DQUdCBUFUQ0FEAkFIBEFOU0MEQU5USAZBUkFCSUMDQURUBEFSQ0gDQVJUBEFSVEgFQVJUTk0FQVJUUEgEQVNUUgNBQ1QDQU1UAkFUBEJJT0wEQklPVANCSVQDQlVTBkJVU1RFQwNDSFAEQ0FOVAVDQVJQVARDSEVNBENPTU0EQ01FRAVDT01ERQRDSVNTBENJU0EEQ0lTQwRDSVNXBENJU1AEQ0lTTgVDT05TVANDTVQEQ09TTQNDQU0EREFTVARESFlHBURFU0dOBVNPTk9HBERDRFQFRFJMVEgDRUNFBEVDT04FRUxFQ1QCRVQDRU1UBkVORVJHWQRFTkdSA0VEVAVFTkdDVwVFTkdFRAVFTkdMQgVFTkdMVAVFTkdSRAVFTkdXUgRFTlZUA0VTTARFU0xHBEVTTEwERVNMUARFU0xSBEVTTFcDRkNTBUZBU0hOA0ZNUwJGVARGSVJFBUZMVEVDBEZSRU4DRlNFBEdFT0cER0VPTARHRVJNBUdFUk9OBEdDT00ESENJVARIRUVEA0hJVANIQ0kESElTVANITFMESE9SVAJITQNIQ0QESFNFUgNIVU0FSU5ESVMESURFUwJJVwRJVEFMBUpBUEFOBEpPVVIFS0lORVMGS09SRUFOBExUQVQCTEEETElCUgRMSUJUBE1HTVQETUFORANNS1QETUFUSANNRVQETUVEQQVNVUlWSQVNVUZITANNVVAETVVTTQROQVRSBU5VUlNFBU5VVFJJA09UQQRQTUVEBUFEQVBUBURBTkNFBUZJVE5TBFBBQ1QFU1BPUlQFVE1BQ1QGUFJTSUFOBVBIQVJNBFBISUwFUEhPVE8DUFRBBFBIWVMEUE9MUwVQUkVBUAZQUkpNR1QGUFJPUFRYBFBTWUMEUFNUQwRSVFZGBVJBSUxSAlJFBFJFQ1ICUkMEUlVTUwRTUkNQA1NQRARTSE1FBUlOVFJQBFNJTEEFU09DU0MDU09DBFNQQU4GU1BFRUNIBFNMUEEEU1RBVARTR1ZUBFRHTEcGVEVDQ09NAlRBA1RBUAJWVARWSUVUAlZOBFdFTEQEV0VYUBQrA6UBZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZGQCDQ8PZA8QFgJmAgEWAhYCHg5QYXJhbWV0ZXJWYWx1ZQUEMTEzORYCHwFlFgJmZmRkAg8PEA8WAh8AZ2QQFQwHQWxsIERheQFNAVQBVwJUaAFGAlNhA01XRgJNVwNUVGgDTS1GA1RCQRUMA0FsbAFNAlR1AVcCVGgBRgJTYQNNV0YCTVcEVHVUaAdNVHVXVGhGA1RCQRQrAwxnZ2dnZ2dnZ2dnZ2dkZAIRDxAPFgIfAGdkEBUHA0FsbAZPbmxpbmUVSW50ZXJhY3RpdmUgVGVsZXZpc2VkCVRlbGV2aXNlZApTaG9ydC1UZXJtB1dlZWtlbmQMR3JlZW4gQ291cnNlFQcDQWxsAm9jA2l0YwJ0YwNzdGMCd2MCZ2MUKwMHZ2dnZ2dnZ2RkAhMPEA8WAh8AZ2QQFRQJQWxsIFRpbWVzBzU6MDAgQU0HNjowMCBBTQc3OjAwIEFNBzg6MDAgQU0HOTowMCBBTQgxMDowMCBBTQgxMTowMCBBTQgxMjowMCBQTQcxOjAwIFBNBzI6MDAgUE0HMzowMCBQTQc0OjAwIFBNBzU6MDAgUE0HNjowMCBQTQc3OjAwIFBNBzg6MDAgUE0HOTowMCBQTQgxMDowMCBQTQgxMTowMCBQTRUUA0FsbAM1YW0DNmFtAzdhbQM4YW0DOWFtBDEwYW0EMTFhbQQxMnBtAzFwbQMycG0DM3BtAzRwbQM1cG0DNnBtAzdwbQM4cG0DOXBtBDEwcG0EMTFwbRQrAxRnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkAhUPEA8WAh8AZ2QQFRQJQWxsIFRpbWVzBzU6MDAgQU0HNjowMCBBTQc3OjAwIEFNBzg6MDAgQU0HOTowMCBBTQgxMDowMCBBTQgxMTowMCBBTQgxMjowMCBQTQcxOjAwIFBNBzI6MDAgUE0HMzowMCBQTQc0OjAwIFBNBzU6MDAgUE0HNjowMCBQTQc3OjAwIFBNBzg6MDAgUE0HOTowMCBQTQgxMDowMCBQTQgxMTowMCBQTRUUA0FsbAM1YW0DNmFtAzdhbQM4YW0DOWFtBDEwYW0EMTFhbQQxMnBtAzFwbQMycG0DM3BtAzRwbQM1cG0DNnBtAzdwbQM4cG0DOXBtBDEwcG0EMTFwbRQrAxRnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkAgUPZBYSAgEPDxYCHgRUZXh0ZWRkAgMPDxYCHwJlZGQCBQ8PFgIfAmVkZAIHDw8WAh8CZWRkAgkPDxYCHwJlZGQCCw8PFgIfAmVkZAIPDw8WAh8CZWRkAhcPPCsADQBkAhkPD2QPEBYIZgIBAgICAwIEAgUCBgIHFggWAh8BZRYCHwFlFgIfAWUWAh8BBQNBbGwWAh8BZRYCHwFlFgIfAWUWAh8BZRYIZmZmZmZmZmZkZBgBBRZjdGwwMCRjcGhNYWluJGd2U2VhcmNoD2dkyUkBmdHfPb+CJ5wZvZE6gsuHfWw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=IU0HMcnLnNg_5UhQ0iWQP3GucntTQRHjJmWiDm2RgWUZBVFo3MzSa7mXRk4LrENzh9x7F7qWCWjOY9SDnhWAHv3EO9E1&amp;t=635172427255305315" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=H_2KeW9e5tvAATu8Vs8nEEA1UiVkYb5enf83XpkLRHgdiUljYv8x51iFRhG2GS0r-ZImpIytlNFeXGeqF_Kp4tRr0w41&amp;t=635172427255305315" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEW8AEC8LC6rg4CrfaM/QgC15+iuAMCuKWItgYCyrmCxA4C9pnmwQgC/pnmwQgC36LC/AoC36LC/AoCou2MFwKFq8+mBgKHq8+mBgKKq6elBgK3q4ulBgKd9oz9CALH/7WUCgKl5Ia6CQKS+9boDgKi1pe5CgLR9cDBBQLCmcaNBAK3gM/DBQLYqbHDDwKOx5zGCALYqYnmDALH/6GABwLYqcHmDALYqeHDDwKtr9zsBwKur+TwAQLYqe2cAwLYqYXmDALYqa3mDALCmdaNBALwksXGDALwkuXpAgLZqb3mDAK0gK/7AgKfmf77BALKzLK7AwLMjaeCBwKq8/2uDAKTquAiAqvk7sgPApOqwJwDAuz8vd0OArWAmwwCtYDziQYCtYDbwwUCtYDL+Q4CtYDf/wsCtYC3+wEC5oWuvgwC3qmt5gwCtYC7nAkCq+SSpwcCuoDv6AgChKztgAwCppm+yQ4Ch46+gAMC74TagwQCtdSLtg8CkaqI+QkC95L1+QsC66Kz1QgCxpnWjQQC3Kmt5gwClKPjywwC39jgiQQC3KmJ5gwCstH/rQwCodHH5wsCp9HzswkCsdHzswkCodHLIwK30e/rBQLqx8WoBgKE37S4DQKE36DsDgKE34SBDQKE3/S8BgKE39z2BQKE3+C+CQK4gOf4AgLgm+LyAQK4gI/7AgLHmdaNBAKX+56OCQKOoZD0CgKWqvz5CAKWqsj5CQL1krGtDAL1kpXGDAKU+46xDwLc8rmFCQL1koGdAwLIm4LoBQKEqqCcAwLTqb3mDALIm5L4DwKugI/rCAKugIv7AgKF+8L9DgL1mbqNBALjhOqTDgKEqtA3AtzkwqcHApuZ7d0FAoWqiJIHAvqZwo0EArHBlRsC3cDt5gQC+r7Diw0Cg4DenQ8C0fGRpAUCtMG1wgYC+ZmqjQQC2dbn9wIC2dbPKQKh5PqUDQLKjeexDALUqaXmDALUqb3DDwLUqY3mDALkhMagAwLSnvWsDwKsttnSAgLAzMa7AwKzgNOcCQLVqaWcAwL+8OmzAgKIr7ipDwK7wcVSAryqwJwDApvHqPIFAvSC1vMBAp6huPcHAvb/zZQKAtuXnL4PAsbFyK8PAs2F4rgIAqPCoJgDAsCblsEPApeUxPkOAqjBxVICsKz94QsCs9+AzQwC2q+DlAkClqLLkwwCvJTcBAKwrMmXDwLLqYGpDwKXxIWQCQKind3fCwLzmZqNBAL0/9XiDALzmZKNBAKkgKsMAvX/wasNAp6FvpIOAtvk0qEJAs6tnLYPArbfgMkCAoDwtNAPAvX/1aQEAq/Bjc0PAs6uq4EGAvrMlsgIAq/BtcIGApTEqagGArff0O0OAufzwIsDAvGZqo0EAvvMlrsDAveZ1o0EAoaqkOkPAveZvo0EArrfrN8IApaH1+ULAqLtmLwJArzN/LkPArPNgLgPArbN/LkPArPNnLgPAoXN/LkPArLN8LgPAvDnhM4IArzNmKcPAo39t48DAuWapnoC7pXH+AsCurnClgIChpmSkgQC5caz/QoCi5mSkgQC78az/QoCjpmSkgQC/pmSkgQCwbnClgIC+M7U/Q0C/87U/Q0C/s7U/Q0C7c7U/Q0C7M7U/Q0CiKvDtwYCiKvHtwYC1ZbAnAkC9M6Q/A0C+86Q/A0C+s6Q/A0C+c6Q/A0C+M6Q/A0C/86Q/A0C/s6Q/A0C7c6Q/A0C7M6Q/A0C1ZbYnAkC1ZbcnAkCwbm6jg8C+M6sZQL/zqxlAv7OrGUC7c6sZQLszqxlAoiru68LAoirv68LAtWWuIQEAvTO6GQC+87oZAL6zuhkAvnO6GQC+M7oZAL/zuhkAv7O6GQC7c7oZALszuhkAtWWoIQEAtWWpIQEAovb6qsOAp6lkaoFbVwfm5aRdb28iDgzdE0LJ/G/5Cg=" />
+</div>
+		<div data-role="page" data-theme="a">
+			<div data-role="header" data-position="fixed">
+               <div class="hlogo">FLC Info </div>
+				<h1>Search for Classes</h1>
+			</div>
+            <fieldset class="SearchBox">
+                
+                <dl class="dlRequired">
+                    <dt class="First Col0">* Semester:</dt>
+                    <dd class="Col1">
+                        <select name="ctl00$cphMain$iSe" id="ctl00_cphMain_iSe">
+                        	<option selected="selected" value="1139">Fall 2013</option>
+		<option value="1143">Spring 2014</option>
+
+	</select>
+                    </dd>
+                    <dt class="Col2">Enrollment Status:</dt>
+                    <dd class="Col3">
+                        <select name="ctl00$cphMain$iCS" id="ctl00_cphMain_iCS">
+		<option selected="selected" value="All">All Classes</option>
+		<option value="o">Open</option>
+		<option value="w">Waitlist</option>
+
+	</select>
+                    </dd>
+                    <dt class="First Col0">* College:</dt>
+                    <dd class="Full">
+                        <select name="ctl00$cphMain$iC" >
+		<option selected="selected" value="">-- SELECT --</option>
+		<option value="All">All</option>
+		<option value="ARC">American River College</option>
+		<option value="CRC">Cosumnes River College</option>
+		<option value="FLC">Folsom Lake College</option>
+		<option value="SCC">Sacramento City College</option>
+
+	</select>
+                        <span id="ctl00_cphMain_rfvC" class="Error" style="color:Red;visibility:hidden;">*</span>
+                    </dd>
+                    <dt class="First Col0">* Subject:</dt>
+                    <dd class="Full">
+                        <select name="ctl00$cphMain$iSu" id="ctl00_cphMain_iSu">
+		<option value="">-- SELECT --</option>
+		<option value="ACCT">Accounting (ACCT)</option>
+		<option value="ADMJ">Administration of Justice (ADMJ)</option>
+		<option value="AERO">Aeronautics (AERO)</option>
+		<option value="AGB">Agriculture Business (AGB)</option>
+		<option value="ATCAD">Air Traffic Cntr/Aircraft Disp (ATCAD)</option>
+		<option value="AH">Allied Health (AH)</option>
+		<option value="ANSC">Animal Science (ANSC)</option>
+		<option value="ANTH">Anthropology (ANTH)</option>
+		<option value="ARABIC">Arabic (ARABIC)</option>
+		<option value="ADT">Architectural Design Tech (ADT)</option>
+		<option value="ARCH">Architecture (ARCH)</option>
+		<option value="ART">Art (ART)</option>
+		<option value="ARTH">Art History (ARTH)</option>
+		<option value="ARTNM">Art New Media (ARTNM)</option>
+		<option value="ARTPH">Art Photography (ARTPH)</option>
+		<option value="ASTR">Astronomy (ASTR)</option>
+		<option value="ACT">Auto Collision Technology (ACT)</option>
+		<option value="AMT">Automotive Mechanics Tech (AMT)</option>
+		<option value="AT">Automotive Technology (AT)</option>
+		<option value="BIOL">Biology (BIOL)</option>
+		<option value="BIOT">Biotechnology (BIOT)</option>
+		<option value="BIT">Building Inspection Technology (BIT)</option>
+		<option value="BUS">Business (BUS)</option>
+		<option value="BUSTEC">Business Technology (BUSTEC)</option>
+		<option value="CHP">California Highway Patrol (CHP)</option>
+		<option value="CANT">Cantonese (CANT)</option>
+		<option value="CARPT">Carpenters Apprenticeship (CARPT)</option>
+		<option value="CHEM">Chemistry (CHEM)</option>
+		<option value="COMM">Communication Studies (COMM)</option>
+		<option value="CMED">Communications Media (CMED)</option>
+		<option value="COMDE">Community Leadership (COMDE)</option>
+		<option value="CISS">Computer Info Sci - Security (CISS)</option>
+		<option value="CISA">Computer Info Science - Apps (CISA)</option>
+		<option value="CISC">Computer Info Science - Core (CISC)</option>
+		<option value="CISW">Computer Info Science - Web (CISW)</option>
+		<option value="CISP">Computer Info Science -Program (CISP)</option>
+		<option value="CISN">Computer Info Science-Network (CISN)</option>
+		<option value="CONST">Construction (CONST)</option>
+		<option value="CMT">Construction Management Tech (CMT)</option>
+		<option value="COSM">Cosmetology (COSM)</option>
+		<option value="CAM">Culinary Arts Management (CAM)</option>
+		<option value="DAST">Dental Assisting (DAST)</option>
+		<option value="DHYG">Dental Hygiene (DHYG)</option>
+		<option value="DESGN">Design Technology (DESGN)</option>
+		<option value="SONOG">Diagnostic Medical Sonography (SONOG)</option>
+		<option value="DCDT">Diesel/Clean Diesel Technology (DCDT)</option>
+		<option value="DRLTH">Drywall/lathing (DRLTH)</option>
+		<option value="ECE">Early Childhood Education (ECE)</option>
+		<option value="ECON">Economics (ECON)</option>
+		<option value="ELECT">Electricians Apprenticeship (ELECT)</option>
+		<option value="ET">Electronics Technology (ET)</option>
+		<option value="EMT">Emergency Medical Technology (EMT)</option>
+		<option value="ENERGY">Energy (ENERGY)</option>
+		<option value="ENGR">Engineering (ENGR)</option>
+		<option value="EDT">Engineering Design Tech (EDT)</option>
+		<option value="ENGCW">English - Creative Writing (ENGCW)</option>
+		<option value="ENGED">English - Education (ENGED)</option>
+		<option value="ENGLB">English - Laboratory (ENGLB)</option>
+		<option value="ENGLT">English - Literature (ENGLT)</option>
+		<option value="ENGRD">English - Reading (ENGRD)</option>
+		<option value="ENGWR">English - Writing (ENGWR)</option>
+		<option value="ENVT">Environmental Technology (ENVT)</option>
+		<option value="ESL">ESL - English as a Second Lang (ESL)</option>
+		<option value="ESLG">ESL - Grammar (ESLG)</option>
+		<option value="ESLL">ESL - Listening (ESLL)</option>
+		<option value="ESLP">ESL - Pronunciation (ESLP)</option>
+		<option value="ESLR">ESL - Reading (ESLR)</option>
+		<option value="ESLW">ESL - Writing (ESLW)</option>
+		<option value="FCS">Family and Consumer Science (FCS)</option>
+		<option value="FASHN">Fashion (FASHN)</option>
+		<option value="FMS">Film and Media Studies (FMS)</option>
+		<option value="FT">Fire Technology (FT)</option>
+		<option value="FIRE">Fire Training Center (FIRE)</option>
+		<option value="FLTEC">Flight Technology (FLTEC)</option>
+		<option value="FREN">French (FREN)</option>
+		<option value="FSE">Funeral Service Education (FSE)</option>
+		<option value="GEOG">Geography (GEOG)</option>
+		<option value="GEOL">Geology (GEOL)</option>
+		<option value="GERM">German (GERM)</option>
+		<option value="GERON">Gerontology (GERON)</option>
+		<option value="GCOM">Graphic Communication (GCOM)</option>
+		<option value="HCIT">Health Care IT (HCIT)</option>
+		<option value="HEED">Health Education (HEED)</option>
+		<option value="HIT">Health Information Technology (HIT)</option>
+		<option value="HCI">Healthcare Interpreting (HCI)</option>
+		<option value="HIST">History (HIST)</option>
+		<option value="HLS">Homeland Security (HLS)</option>
+		<option value="HORT">Horticulture (HORT)</option>
+		<option value="HM">Hospitality Management (HM)</option>
+		<option value="HCD">Human Career Development (HCD)</option>
+		<option value="HSER">Human Services (HSER)</option>
+		<option value="HUM">Humanities (HUM)</option>
+		<option value="INDIS">Interdisciplinary Studies (INDIS)</option>
+		<option value="IDES">Interior Design (IDES)</option>
+		<option value="IW">Iron Workers (IW)</option>
+		<option value="ITAL">Italian (ITAL)</option>
+		<option value="JAPAN">Japanese (JAPAN)</option>
+		<option value="JOUR">Journalism (JOUR)</option>
+		<option value="KINES">Kinesiology (KINES)</option>
+		<option value="KOREAN">Korean (KOREAN)</option>
+		<option value="LTAT">Learn Tutor Acad Tech (LTAT)</option>
+		<option value="LA">Legal Assisting (LA)</option>
+		<option value="LIBR">Library (LIBR)</option>
+		<option value="LIBT">Library Technology (LIBT)</option>
+		<option value="MGMT">Management (MGMT)</option>
+		<option value="MAND">Mandarin (MAND)</option>
+		<option value="MKT">Marketing (MKT)</option>
+		<option value="MATH">Mathematics (MATH)</option>
+		<option value="MET">Mechanical Electrical Tech (MET)</option>
+		<option value="MEDA">Medical Assisting (MEDA)</option>
+		<option value="MUIVI">Music: Instrumental/Voice Instruction (MUIVI)</option>
+		<option value="MUFHL">Music: Music Fundamentals, History &amp; Lit (MUFHL)</option>
+		<option value="MUP">Music: Music Performance (MUP)</option>
+		<option value="MUSM">Music: Specializations in Music (MUSM)</option>
+		<option value="NATR">Natural Resources (NATR)</option>
+		<option value="NURSE">Nursing (NURSE)</option>
+		<option value="NUTRI">Nutrition and Foods (NUTRI)</option>
+		<option value="OTA">Occupational Therapy Assistant (OTA)</option>
+		<option value="PMED">Paramedics (PMED)</option>
+		<option value="ADAPT">PE: Adapted Physical Education (ADAPT)</option>
+		<option value="DANCE">PE: Dance (DANCE)</option>
+		<option value="FITNS">PE: Fitness (FITNS)</option>
+		<option value="PACT">PE: Personal Activities (PACT)</option>
+		<option value="SPORT">PE: Sports (SPORT)</option>
+		<option value="TMACT">PE: Team Activities (TMACT)</option>
+		<option value="PRSIAN">Persian (PRSIAN)</option>
+		<option value="PHARM">Pharmacy Technology (PHARM)</option>
+		<option value="PHIL">Philosophy (PHIL)</option>
+		<option value="PHOTO">Photography (PHOTO)</option>
+		<option value="PTA">Physical Therapist Assistant (PTA)</option>
+		<option value="PHYS">Physics (PHYS)</option>
+		<option value="POLS">Political Science (POLS)</option>
+		<option value="PREAP">Pre-Apprenticeship (PREAP)</option>
+		<option value="PRJMGT">Project Management (PRJMGT)</option>
+		<option value="PROPTX">Property Tax (PROPTX)</option>
+		<option value="PSYC">Psychology (PSYC)</option>
+		<option value="PSTC">Public Safety Training Center (PSTC)</option>
+		<option value="RTVF">Radio, TV, and Film Production (RTVF)</option>
+		<option value="RAILR">Railroad Operations (RAILR)</option>
+		<option value="RE">Real Estate (RE)</option>
+		<option value="RECR">Recreation (RECR)</option>
+		<option value="RC">Respiratory Care (RC)</option>
+		<option value="RUSS">Russian (RUSS)</option>
+		<option value="SRCP">Saco Regional Chaplains' Prog (SRCP)</option>
+		<option value="SPD">Sacramento Police Department (SPD)</option>
+		<option value="SHME">Sheet Metal Apprenticeship (SHME)</option>
+		<option value="INTRP">Sign Language Interpreting (INTRP)</option>
+		<option value="SILA">Sign Language Studies (SILA)</option>
+		<option value="SOCSC">Social Science (SOCSC)</option>
+		<option value="SOC">Sociology (SOC)</option>
+		<option value="SPAN">Spanish (SPAN)</option>
+		<option value="SPEECH">Speech (SPEECH)</option>
+		<option value="SLPA">Speech-Language Pathology (SLPA)</option>
+		<option value="STAT">Statistics (STAT)</option>
+		<option value="SGVT">Student Government (SGVT)</option>
+		<option value="TGLG">Tagalog (TGLG)</option>
+		<option value="TECCOM">Technical Communications (TECCOM)</option>
+		<option value="TA">Theatre Arts (TA)</option>
+		<option value="TAP">Theatre Arts Performance (TAP)</option>
+		<option value="VT">Veterinary Technology (VT)</option>
+		<option value="VIET">Vietnamese (VIET)</option>
+		<option value="VN">Vocational Nursing (VN)</option>
+		<option value="WELD">Welding (WELD)</option>
+		<option value="WEXP">Work Experience (WEXP)</option>
+
+	</select>
+                        <span id="ctl00_cphMain_rfvSu" class="Error" style="color:Red;visibility:hidden;">*</span>
+                    </dd>
+                </dl>
+                
+                
+                <dl class="dlOptional">
+                    <dt class="First Col0">Days:</dt>
+                    <dd class="Col1">
+                        <select name="ctl00$cphMain$iD" id="ctl00_cphMain_iD">
+		<option value="All">All Day</option>
+		<option value="M">M</option>
+		<option value="Tu">T</option>
+		<option value="W">W</option>
+		<option value="Th">Th</option>
+		<option value="F">F</option>
+		<option value="Sa">Sa</option>
+		<option value="MWF">MWF</option>
+		<option value="MW">MW</option>
+		<option value="TuTh">TTh</option>
+		<option value="MTuWThF">M-F</option>
+		<option value="TBA">TBA</option>
+
+	</select>
+                    </dd>
+                    <dt class="Col2">Special Courses:</dt>
+                    <dd class="Col3">
+                        <select name="ctl00$cphMain$iSC" id="ctl00_cphMain_iSC">
+		<option value="All">All</option>
+		<option value="oc">Online</option>
+		<option value="itc">Interactive Televised</option>
+		<option value="tc">Televised</option>
+		<option value="stc">Short-Term</option>
+		<option value="wc">Weekend</option>
+		<option value="gc">Green Course</option>
+
+	</select>
+                    </dd>
+                    <dt class="First Col0">Class Start Time:</dt>
+                    <dd class="Col1">
+                        <select name="ctl00$cphMain$iST" id="ctl00_cphMain_iST">
+		<option value="All">All Times</option>
+		<option value="5am">5:00 AM</option>
+		<option value="6am">6:00 AM</option>
+		<option value="7am">7:00 AM</option>
+		<option value="8am">8:00 AM</option>
+		<option value="9am">9:00 AM</option>
+		<option value="10am">10:00 AM</option>
+		<option value="11am">11:00 AM</option>
+		<option value="12pm">12:00 PM</option>
+		<option value="1pm">1:00 PM</option>
+		<option value="2pm">2:00 PM</option>
+		<option value="3pm">3:00 PM</option>
+		<option value="4pm">4:00 PM</option>
+		<option value="5pm">5:00 PM</option>
+		<option value="6pm">6:00 PM</option>
+		<option value="7pm">7:00 PM</option>
+		<option value="8pm">8:00 PM</option>
+		<option value="9pm">9:00 PM</option>
+		<option value="10pm">10:00 PM</option>
+		<option value="11pm">11:00 PM</option>
+
+	</select>
+                    </dd>
+                    <dt class="Col2">Class End Time:</dt>
+                    <dd class="Col3">
+                        <select name="ctl00$cphMain$iET" id="ctl00_cphMain_iET">
+		<option value="All">All Times</option>
+		<option value="5am">5:00 AM</option>
+		<option value="6am">6:00 AM</option>
+		<option value="7am">7:00 AM</option>
+		<option value="8am">8:00 AM</option>
+		<option value="9am">9:00 AM</option>
+		<option value="10am">10:00 AM</option>
+		<option value="11am">11:00 AM</option>
+		<option value="12pm">12:00 PM</option>
+		<option value="1pm">1:00 PM</option>
+		<option value="2pm">2:00 PM</option>
+		<option value="3pm">3:00 PM</option>
+		<option value="4pm">4:00 PM</option>
+		<option value="5pm">5:00 PM</option>
+		<option value="6pm">6:00 PM</option>
+		<option value="7pm">7:00 PM</option>
+		<option value="8pm">8:00 PM</option>
+		<option value="9pm">9:00 PM</option>
+		<option value="10pm">10:00 PM</option>
+		<option value="11pm">11:00 PM</option>
+
+	</select>
+                    </dd>
+                </dl>
+                <div class="Buttons">
+                    <input type="submit" name="ctl00$cphMain$btnSearch" value="View Courses" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$cphMain$btnSearch&quot;, &quot;&quot;, true, &quot;vgSearch&quot;, &quot;&quot;, false, false))" id="ctl00_cphMain_btnSearch" />
+                    <input type="submit" name="ctl00$cphMain$btnReset" value="Reset" id="ctl00_cphMain_btnReset" />
+                </div>
+                <div class="Footer">
+                    * = Required Fields
+                </div>
+                <div data-role="footer" data-position="bottom">
+	<h1>&nbsp;</h1>
+</div>
+            </fieldset>
+        </div>
+        
+        
+        
+        
+        
+    
+</div>
+    
+    
+
+        </div>
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_cphMain_rfvC"), document.getElementById("ctl00_cphMain_rfvSu"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_cphMain_rfvC = document.all ? document.all["ctl00_cphMain_rfvC"] : document.getElementById("ctl00_cphMain_rfvC");
+ctl00_cphMain_rfvC.controltovalidate = "ctl00_cphMain_iC";
+ctl00_cphMain_rfvC.errormessage = "*";
+ctl00_cphMain_rfvC.validationGroup = "vgSearch";
+ctl00_cphMain_rfvC.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_rfvC.initialvalue = "";
+var ctl00_cphMain_rfvSu = document.all ? document.all["ctl00_cphMain_rfvSu"] : document.getElementById("ctl00_cphMain_rfvSu");
+ctl00_cphMain_rfvSu.controltovalidate = "ctl00_cphMain_iSu";
+ctl00_cphMain_rfvSu.errormessage = "*";
+ctl00_cphMain_rfvSu.validationGroup = "vgSearch";
+ctl00_cphMain_rfvSu.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_cphMain_rfvSu.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+</body>
+</html>

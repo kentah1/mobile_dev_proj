@@ -1,0 +1,36 @@
+{ "students": [
+{
+        "studentID": "W123456789",
+        "firstName": "Fred",
+        "lastName": "Smith",
+        "psw": "abc123",
+        "classNums": [
+            "19331",
+            "15736",
+            "19332"
+        ]
+    },
+	{
+        "studentID": "W123456788",
+        "firstName": "John",
+        "lastName": "Jones",
+        "psw": "abc123",
+        "classNums": [
+            "19331",
+            "15736",
+            "19334"
+        ]
+    },
+{
+        "studentID": "W123456787",
+        "firstName": "Freda",
+        "lastName": "Doe",
+        "psw": "abc123",
+        "classNums": [
+            "19331",
+            "15736",
+            "16121"
+        ]
+    }
+]
+}

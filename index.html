@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>FLC Map</title>
+		<link rel="stylesheet" href="themes/FLC.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	</head>
+	<body>
+		<script>
+		 var studentInfo;
+	     $.getJSON( "Students.json", function(data) {
+             studentInfo = data.students;
+         })
+         .fail(function() {
+         console.log( "Error getting JSON file" );
+         })
+	//check for valid username/password
+	function validateUser () {
+		for(index = 0; index < studentInfo.length; index++) {
+			//alert("student from data " + studentInfo[index].studentID + " student entered " + username.value);
+			if(studentInfo[index].studentID == username.value && studentInfo[index].psw == password.value ) { 
+		       // alert(studentInfo[index].firstName + " " + studentInfo[index].lastName + " has a good login");
+				localStorage.setItem("studentID", username.value);
+				window.location = "home.html";
+				return;
+			}
+		}
+		alert("Invalid username/password - please try again"); 
+		return;
+	}
+        </script>
+		<div data-role="page" data-theme="a">
+        
+			<div data-role="header" data-position="fixed">
+				 <div class="hlogo">FLC Info </div>
+                 <h1>Login</h1>
+               
+			</div>
+		<form action="">
+				<input type="text" placeholder="Username" required id="username" />
+				<input type="password" placeholder="Password" required id="password" />
+				<input type="submit" value="Log In" onClick="validateUser()"/>
+		</form><!-- form -->
+			</div>
+	</body>
+</html>
