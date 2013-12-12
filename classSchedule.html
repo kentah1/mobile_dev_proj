@@ -33,6 +33,7 @@
 		var studentName = window.localStorage.getItem("studentID");
 		//find index to the student ID in the JSON file
         var indexID = getObjectKeyIndex(studentInfo, "studentID", studentName);
+		alert ("indexID = " + indexID);
 		if(indexID) {		
         //have the student, now get the array containing the courses
     		var classNumArray = studentInfo[indexID].classNums;
@@ -74,6 +75,7 @@
 	}
 //get the index to the desired key
 function getObjectKeyIndex(obj, keyToFind, valToFind) {
+	alert("got to getObjectKeyIndex function");
     var i = 0, key;
     for (key in obj) {
 		alert("obj[key][keyToFind] = " + obj[key][keyToFind] + " valToFind = " + valToFind);
