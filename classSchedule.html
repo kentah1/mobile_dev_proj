@@ -32,6 +32,7 @@
 		//get an array containing the course numbers for the student
 		var studentName = window.localStorage.getItem("studentID");
 		//find index to the student ID in the JSON file
+		alert("studentInfo length = " + studentInfo.length + " classInfo length = " + classInfo.length);
         var indexID = getObjectKeyIndex(studentInfo, "studentID", studentName);
 		alert ("indexID = " + indexID);
 		if(indexID) {		
