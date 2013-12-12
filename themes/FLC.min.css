@@ -19,6 +19,11 @@
 	width: 100%;
 	height: 100%;	
 }
+#home-body {
+		font-family: Arial, "Droid Sans", Helvetica, sans-serif;
+	font-size:18px;
+}
+
 .hlogo {
 	text-align:left;
 	font-size:34px;
@@ -40,7 +45,7 @@ button,
 .ui-btn {
 	font-size: 1em;
 	line-height: 1.3;
-	  font-family: trajan /*{global-font-family}*/;
+	  font-family: trajan, "Droid Serif", "Times New Roman",Times,serif; /*{global-font-family}*/
 }
 body {
 	height:100%;
