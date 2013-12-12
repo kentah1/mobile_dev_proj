@@ -2,7 +2,7 @@ window.onload = function() {
 var sfLatlng, map, passedURL, passedBldg;
 //passedURL = document.URL;
 //passedBldg = passedURL.substr(passedURL.indexOf("=") + 1);
-passedBldg = localStorage.getItem("buildingNum");
+passedBldg = window.localStorage.getItem("buildingNum");
 sfLatlng = pickMap(passedBldg);
 initialize();
 google.maps.event.addDomListener(window, 'load', initialize);

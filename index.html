@@ -26,7 +26,7 @@
 			//alert("student from data " + studentInfo[index].studentID + " student entered " + username.value);
 			if(studentInfo[index].studentID == username.value && studentInfo[index].psw == password.value ) { 
 		       // alert(studentInfo[index].firstName + " " + studentInfo[index].lastName + " has a good login");
-				localStorage.setItem("studentID", username.value);
+				window.localStorage.setItem("studentID", username.value);
 				window.location = "home.html";
 				return;
 			}

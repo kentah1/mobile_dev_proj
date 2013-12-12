@@ -26,7 +26,8 @@
 
 .hlogo {
 	text-align:left;
-	font-size:34px;
+	vertical-align:middle;
+	font-size:28px;
 	position:fixed;
 	margin-left:10px;
 }

@@ -30,7 +30,7 @@
 	//get the courses for the logged in user
 	function getSchedule () {
 		//get an array containing the course numbers for the student
-		var studentName = localStorage.getItem("studentID");
+		var studentName = window.localStorage.getItem("studentID");
 		//find index to the student ID in the JSON file
         var indexID = getObjectKeyIndex(studentInfo, "studentID", studentName);
 		if(indexID) {		
@@ -68,7 +68,7 @@
 				
 		    }
 		} else {
-			alert("No courses found for student");
+			alert("Student name not found in student data: " + studentName);
 		}
 					
 	}

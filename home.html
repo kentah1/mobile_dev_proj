@@ -16,7 +16,7 @@
 			//if it has letters, (like FL) strip them off
 			buildingNum = buildingNum.replace( /^\D+/g, '');
 			if (buildingNum > 0 && buildingNum < 13) {
-				 localStorage.setItem("buildingNum",buildingNum);
+				 window.localStorage.setItem("buildingNum",buildingNum);
 				window.location.assign("getMapx.html");
 				return;
 			}
