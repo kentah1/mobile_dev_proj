@@ -76,7 +76,7 @@
 //get the index to the desired key
 function getObjectKeyIndex(obj, keyToFind, valToFind) {
 	alert("got to getObjectKeyIndex function");
-    var i = 0, key;
+    alert("object length = " + obj.length);
 /*    for (key in obj) {
 		alert("obj[key][keyToFind] = " + obj[key][keyToFind] + " valToFind = " + valToFind);
  		//if the value of the JSON object is the same as the desired value, return the key index value
@@ -85,7 +85,7 @@ function getObjectKeyIndex(obj, keyToFind, valToFind) {
         }
         i++;
     }*/
-    for (key = 0; key < obj.length; key++) {
+    for (var key = 0; key < obj.length; key++) {
 		alert("obj[key][keyToFind] = " + obj[key][keyToFind] + " valToFind = " + valToFind);
  		//if the value of the JSON object is the same as the desired value, return the key index value
         if (obj[key][keyToFind] === valToFind) {
