@@ -15,7 +15,7 @@ function getStudents() {
 		    //get the student information file
      	$.getJSON( "Students.json", function(data) {
         studentInfo = data.students;
-    	alert("studentInfo object = " + studentInfo);
+    	//alert("studentInfo object = " + studentInfo);
 		getClasses();
          })
         .fail(function() {
@@ -26,7 +26,7 @@ function getClasses() {
         //get the class schedule file
 	    $.getJSON( "ClassSchedule.json", function(data) {
         classInfo = data.subjects;
-    	alert("classInfo object = " + classInfo);
+    	//alert("classInfo object = " + classInfo);
 		getSchedule();
         })
         .fail(function() {
@@ -49,14 +49,14 @@ function getClasses() {
 	function getSchedule () {
 		
 
-		alert("studentInfo length = " + studentInfo.length + " classInfo length = " + classInfo.length);
+		//alert("studentInfo length = " + studentInfo.length + " classInfo length = " + classInfo.length);
 		//get an array containing the course numbers for the student
 		var studentName = window.localStorage.getItem("studentID");
-		alert("studentName = " + studentName);
+		//alert("studentName = " + studentName);
 		//find index to the student ID in the JSON file
 		var indexID = getObjectKeyIndex(studentInfo, "studentID", studentName);
 		alert ("indexID = " + indexID);
-		if(indexID) {		
+		if(indexID != null) {		
         //have the student, now get the array containing the courses
     		var classNumArray = studentInfo[indexID].classNums;
 	    	//have the array, now cycle thru it getting the details from the class schedule
@@ -65,8 +65,9 @@ function getClasses() {
 			var madeTable = false;
 		    for (key in classNumArray) {
     	        var indexID = getObjectKeyIndex(classInfo, "classNum", classNumArray[key]);
+				alert ("indexID for class = " + indexID);
 			    //if we matched the course in the student info to a class in the course info, then display it
-			    if(indexID) {
+			    if(indexID != null) {
 					//we know we have at least one class, so we can put out the table to display the courses
 					if (!madeTable) {
 						var classTable = createTable();
