@@ -80,7 +80,9 @@ function getClasses() {
 					alert("did the innerHtml on first for title");
 					row++;
 					var tr = classTable.appendChild(document.createElement('tr'));  //add second row
+					alert("appended tr");
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
+					alert("appended td");
 					cell[key * row].innerHTML = "Building: "+String.trim(classInfo[indexID].building) + ",&nbsp;  " + classInfo[indexID].days + "&nbsp;   " + classInfo[indexID].time;
 					alert("added the second row")
 					var tr = classTable.appendChild(document.createElement('tr'));  //add third row
