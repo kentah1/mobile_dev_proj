@@ -76,8 +76,11 @@ function getClasses() {
 					//build the table elements
 					alert("got to build table elements");
 					var tr = classTable.appendChild(document.createElement('tr'));  //add first row
+					alert("created the tr element");
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
+					alert("appended the column to the cell");
 					cell[key * row].innerHTML = classInfo[indexID].subject + " - " + classInfo[indexID].title;
+					alert("did the innerHtml on first for title");
 					row++;
 					var tr = classTable.appendChild(document.createElement('tr'));  //add second row
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
