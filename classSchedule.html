@@ -74,24 +74,24 @@ function getClasses() {
 						var madeTable = true;
 					}
 					//build the table elements
-					alert("got to build table elements");
 					var tr = classTable.appendChild(document.createElement('tr'));  //add first row
-					alert("created the tr element");
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
-					alert("appended the column to the cell");
 					cell[key * row].innerHTML = classInfo[indexID].subject + " - " + classInfo[indexID].title;
 					alert("did the innerHtml on first for title");
 					row++;
 					var tr = classTable.appendChild(document.createElement('tr'));  //add second row
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
 					cell[key * row].innerHTML = "Building: "+String.trim(classInfo[indexID].building) + ",&nbsp;  " + classInfo[indexID].days + "&nbsp;   " + classInfo[indexID].time;
+					alert("added the second row")
 					var tr = classTable.appendChild(document.createElement('tr'));  //add third row
                     tr.setAttribute("class", "table-line");
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
 					cell[key * row].innerHTML = "Instructor: "+classInfo[indexID].instructor + ",&nbsp;  " + "Class number: " +classInfo[indexID].classNum + ",&nbsp;   " + "Units: " + classInfo[indexID].units;
-				    
+				    alert("added the third row");
 					var element=document.getElementById("classList");
-                    element.appendChild(classTable);  // put in the html	
+					alert("got the classlist element");
+                    element.appendChild(classTable);  // put in the html
+					alert("appended to the table");	
 			    }
 				
 		    }
