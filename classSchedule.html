@@ -83,7 +83,7 @@ function getClasses() {
 					alert("appended tr");
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
 					alert("appended td");
-					cell[key * row].innerHTML = "Building: "+String.trim(classInfo[indexID].building) + ",&nbsp;  " + classInfo[indexID].days + "&nbsp;   " + classInfo[indexID].time;
+					cell[key * row].innerHTML = "Building: "+(classInfo[indexID].building).trim() + ",&nbsp;  " + classInfo[indexID].days + "&nbsp;   " + classInfo[indexID].time;
 					alert("added the second row")
 					var tr = classTable.appendChild(document.createElement('tr'));  //add third row
                     tr.setAttribute("class", "table-line");
@@ -104,8 +104,7 @@ function getClasses() {
 	}
 //get the index to the desired key
 function getObjectKeyIndex(obj, keyToFind, valToFind) {
-	alert("got to getObjectKeyIndex function");
-    alert("object length = " + obj.length);
+	
 /*    for (key in obj) {
 		alert("obj[key][keyToFind] = " + obj[key][keyToFind] + " valToFind = " + valToFind);
  		//if the value of the JSON object is the same as the desired value, return the key index value
