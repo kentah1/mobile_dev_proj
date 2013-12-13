@@ -69,11 +69,12 @@ function getClasses() {
 			    //if we matched the course in the student info to a class in the course info, then display it
 			    if(indexID != null) {
 					//we know we have at least one class, so we can put out the table to display the courses
-					if (!madeTable) {
+					if (madeTable === false) {
 						var classTable = createTable();
 						var madeTable = true;
 					}
 					//build the table elements
+					alert("got to build table elements");
 					var tr = classTable.appendChild(document.createElement('tr'));  //add first row
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
 					cell[key * row].innerHTML = classInfo[indexID].subject + " - " + classInfo[indexID].title;
