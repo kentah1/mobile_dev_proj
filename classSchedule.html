@@ -10,27 +10,46 @@
 		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script>
-	//get the student information file
-	 var studentInfo;
-	$.getJSON( "Students.json", function(data) {
-    studentInfo = data.students;
-	alert("studentInfo object = " + studentInfo);
-    })
-    .fail(function() {
-    alert( "Error getting student file" );
-    })
-    //get the class schedule file
-	var classInfo;
-	$.getJSON( "ClassSchedule.json", function(data) {
-    classInfo = data.subjects;
-	alert("classInfo object = " + classInfo);
-    })
-    .fail(function() {
-	alert( "Error getting class schedule file" );
-    })
+var studentInfo, classInfo;
+function getStudents() {
+		    //get the student information file
+     	$.getJSON( "Students.json", function(data) {
+        studentInfo = data.students;
+    	alert("studentInfo object = " + studentInfo);
+		getClasses();
+         })
+        .fail(function() {
+        alert( "Error getting student file" );
+        });
+}
+function getClasses() {
+        //get the class schedule file
+	    $.getJSON( "ClassSchedule.json", function(data) {
+        classInfo = data.subjects;
+    	alert("classInfo object = " + classInfo);
+		getSchedule();
+        })
+        .fail(function() {
+    	alert( "Error getting class schedule file" );
+        });
+		
+}
+		// Call onDeviceReady when PhoneGap is loaded.
+    //
+    // At this point, the document has loaded but phonegap-1.0.0.js has not.
+    // When PhoneGap is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    // 
+    document.addEventListener("deviceready", getStudents(), false);
+
+    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+    
+
 	//get the courses for the logged in user
 	function getSchedule () {
-		alert("studentInfo length = " + studentInfo.length + " classInfo length = " + classInfo);
+		
+
+		alert("studentInfo length = " + studentInfo.length + " classInfo length = " + classInfo.length);
 		//get an array containing the course numbers for the student
 		var studentName = window.localStorage.getItem("studentID");
 		alert("studentName = " + studentName);
@@ -109,7 +128,7 @@ function createTable() {
 }
 </script>
 </head>
-<body onLoad="getSchedule()">
+<body>
 		<div data-role="page" data-theme="a">
 			<div data-role="header" data-position="fixed">
             				 <div class="hlogo">FLC Info </div>
