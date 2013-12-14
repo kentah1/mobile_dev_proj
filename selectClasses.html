@@ -65,8 +65,8 @@ return true;
                     <dt class="First Col0">* Semester:</dt>
                     <dd class="Col1">
                         <select name="ctl00$cphMain$iSe" id="ctl00_cphMain_iSe">
-                        	<option selected="selected" value="1139">Fall 2013</option>
-		<option value="1143">Spring 2014</option>
+                        	<option value="1139">Fall 2013</option>
+		<option selected="selected" value="1143">Spring 2014</option>
 
 	</select>
                     </dd>
@@ -86,7 +86,7 @@ return true;
 		<option value="All">All</option>
 		<option value="ARC">American River College</option>
 		<option value="CRC">Cosumnes River College</option>
-		<option value="FLC">Folsom Lake College</option>
+		<option selected="selected" value="FLC">Folsom Lake College</option>
 		<option value="SCC">Sacramento City College</option>
 
 	</select>
@@ -357,24 +357,13 @@ return true;
                     <input type="submit" name="ctl00$cphMain$btnReset" value="Reset" id="ctl00_cphMain_btnReset" />
                 </div>
                 <div class="Footer">
-                    * = Required Fields
-                </div>
-                <div data-role="footer" data-position="bottom">
-	<h1>&nbsp;</h1>
-</div>
+                    * = Required Fields<br/><br/>&nbsp;
+              </div>
             </fieldset>
-        </div>
-        
-        
-        
-        
-        
-    
+        </div>    
 </div>
-    
-    
-
-        </div>
+ </div>               
+ 
 <script type="text/javascript">
 //<![CDATA[
 var Page_Validators =  new Array(document.getElementById("ctl00_cphMain_rfvC"), document.getElementById("ctl00_cphMain_rfvSu"));
@@ -419,6 +408,22 @@ function ValidatorOnSubmit() {
         //]]>
 </script>
 </form>
-
+       <div id="footer" >
+       <table align="center" width="300" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  	<td><a href="home.html" target="_blank"><img src="homeIcon.png" width="30" height="30"></td>
+    <td> <a href="getMapx.html" target="_blank"><img src="getMapIcon.png" width="30" height="30"></a></td>
+    <td><a href="classSchedule.html" target="_blank"><img src="classListIcon.png" width="30" height="30"></td>
+    <td><img src="searchClassIconActive.png" width="30" height="30">
+      </td>
+  </tr>
+  <tr>
+    <td>Home</td>
+    <td>Find Building</td>
+    <td>Get Schedule</td>
+    <td>Search Classes</td>
+  </tr>
+</table>
+	</div>
 </body>
 </html>
