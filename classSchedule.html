@@ -77,23 +77,16 @@ function getClasses() {
 					var tr = classTable.appendChild(document.createElement('tr'));  //add first row
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
 					cell[key * row].innerHTML = classInfo[indexID].subject + " - " + classInfo[indexID].title;
-					alert("did the innerHtml on first for title");
 					row++;
 					var tr = classTable.appendChild(document.createElement('tr'));  //add second row
-					alert("appended tr");
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
-					alert("appended td");
 					cell[key * row].innerHTML = "Building: "+(classInfo[indexID].building).trim() + ",&nbsp;  " + classInfo[indexID].days + "&nbsp;   " + classInfo[indexID].time;
-					alert("added the second row")
 					var tr = classTable.appendChild(document.createElement('tr'));  //add third row
                     tr.setAttribute("class", "table-line");
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
 					cell[key * row].innerHTML = "Instructor: "+classInfo[indexID].instructor + ",&nbsp;  " + "Class number: " +classInfo[indexID].classNum + ",&nbsp;   " + "Units: " + classInfo[indexID].units;
-				    alert("added the third row");
 					var element=document.getElementById("classList");
-					alert("got the classlist element");
                     element.appendChild(classTable);  // put in the html
-					alert("appended to the table");	
 			    }
 				
 		    }
