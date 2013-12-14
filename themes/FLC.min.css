@@ -23,7 +23,18 @@
 		font-family: Arial, "Droid Sans", Helvetica, sans-serif;
 	font-size:18px;
 }
-
+#footer {
+	text-align: center;
+	background: #70147A;
+	color: #ffffff;
+	font-size:10px;
+	padding: 0.5em 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height:50px;
+	width: 100%;
+}
 .hlogo {
 	text-align:left;
 	vertical-align:middle;

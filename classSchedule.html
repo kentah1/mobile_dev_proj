@@ -55,7 +55,6 @@ function getClasses() {
 		//alert("studentName = " + studentName);
 		//find index to the student ID in the JSON file
 		var indexID = getObjectKeyIndex(studentInfo, "studentID", studentName);
-		alert ("indexID = " + indexID);
 		if(indexID != null) {		
         //have the student, now get the array containing the courses
     		var classNumArray = studentInfo[indexID].classNums;
@@ -135,8 +134,6 @@ function createTable() {
 		
         <div id="classList">
         </div>
-		
-        </div>
               <div id="footer" >
        <table align="center" width="300" border="0" cellspacing="0" cellpadding="0">
   <tr>
@@ -153,6 +150,8 @@ function createTable() {
     <td>Search Classes</td>
   </tr>
 </table>
-	</div>
+	</div>		
+        </div>
+
 	</body>
 </html>
