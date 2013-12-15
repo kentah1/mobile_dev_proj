@@ -82,7 +82,7 @@ function getClasses() {
 					var tr = classTable.appendChild(document.createElement('tr'));  //add third row
                     tr.setAttribute("class", "table-line");
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
-					cell[key * row].innerHTML = "Instructor: "+classInfo[indexID].instructor + ",&nbsp;  " + "Class number: " +classInfo[indexID].classNum + ",&nbsp;   " + "Units: " + classInfo[indexID].units;
+					cell[key * row].innerHTML = "Instructor: "+classInfo[indexID].instructor + ",&nbsp;  " + "Class: " +classInfo[indexID].classNum + ",&nbsp;   " + "Units: " + classInfo[indexID].units;
 					var element=document.getElementById("classList");
                     element.appendChild(classTable);  // put in the html
 			    }
@@ -116,10 +116,10 @@ function createTable() {
     classTable = document.createElement('table');
 	classTable.setAttribute("id", "cTable");//put in css
 	//classTable.setAttribute("border", "2px");
-	classTable.setAttribute("align", "center");
+//	classTable.setAttribute("align", "center");
 	classTable.setAttribute("class", "table-stripe");
-	classTable.setAttribute("border-spacing", "0");
-    classTable.setAttribute("border-collapse", "collapse");
+//	classTable.setAttribute("border-spacing", "0");
+//    classTable.setAttribute("border-collapse", "collapse");
 	return classTable;	
 }
 </script>
@@ -137,10 +137,10 @@ function createTable() {
               <div id="footer" >
        <table align="center" width="300" border="0" cellspacing="0" cellpadding="0">
   <tr>
-  	<td><a target="_self" href="home.html" target="_blank"><img src="homeIcon.png" width="30" height="30"></a></td>
-    <td> <a target="_self" href="getMapx.html" target="_blank"><img src="getMapIcon.png" width="30" height="30"></a></td>
+  	<td><a target="_self" href="home.html"><img src="homeIcon.png" width="30" height="30"></a></td>
+    <td> <a target="_self" href="getMapx.html"><img src="getMapIcon.png" width="30" height="30"></a></td>
     <td><img src="classListIconActive.png" width="30" height="30"></td>
-    <td><a target="_self" href="selectClasses.html" target="_blank"><img src="searchClassIcon.png" width="30" height="30"></a>
+    <td><a target="_self" href="selectClasses.html"><img src="searchClassIcon.png" width="30" height="30"></a>
       </td>
   </tr>
   <tr>

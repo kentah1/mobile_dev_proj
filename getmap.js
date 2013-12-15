@@ -1,13 +1,18 @@
 window.onload = function() {
 var sfLatlng, map, passedURL, passedBldg;
-//passedURL = document.URL;
-//passedBldg = passedURL.substr(passedURL.indexOf("=") + 1);
+//get the building number to use
 passedBldg = window.localStorage.getItem("buildingNum");
+//if it is null then have the user enter it
+if (passedBldg === "") {
+	getBuilding();
+	passedBldg = window.localStorage.getItem("buildingNum");
+}
 sfLatlng = pickMap(passedBldg);
 initialize();
 google.maps.event.addDomListener(window, 'load', initialize);
 function initialize() {
     'use strict';
+	
     var mapOptions = {
         zoom: 18,
         center: sfLatlng,
@@ -76,4 +81,17 @@ function pickMap(buildingNumber) {
     }
     return sfLatlng;
 }
+		function getBuilding() {
+			var buildingNum  = prompt("Enter Building to Find","");
+			//if it has letters, (like FL) strip them off
+			buildingNum = buildingNum.replace( /^\D+/g, '');
+			if (buildingNum > 0 && buildingNum < 13) {
+				 window.localStorage.setItem("buildingNum",buildingNum);
+				return;
+			}
+			//failed to get valid building number
+			alert("Invalid Building Number\nTry Again");
+			getBuilding();
+		}
+
 }

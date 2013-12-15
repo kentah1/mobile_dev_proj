@@ -10,21 +10,13 @@
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script>
-		function getBuilding() {
-			var buildingNum  = prompt("Enter Building to Find","");
-			//if it has letters, (like FL) strip them off
-			buildingNum = buildingNum.replace( /^\D+/g, '');
-			if (buildingNum > 0 && buildingNum < 13) {
-				 window.localStorage.setItem("buildingNum",buildingNum);
-				window.location.assign("getMapx.html");
-				return;
-			}
-			//failed to get valid building number
-			alert("Invalid Building Number\nTry Again");
-			getBuilding();
-		}
-		</script>
+ <script>
+ function getMap() {
+ //set the building number to null so the map will always ask for the number if we come thru home
+    window.localStorage.setItem("buildingNum","");
+    window.location="getMapx.html";
+ }
+ </script>
 	</head>
 	<body>
 		<div data-role="page" data-theme="a">
@@ -35,7 +27,7 @@
                
 			</div>
             <div id="home-body">
-		    <a href="javascript:getBuilding()"><img src="getMap.png" width="128" height="128"></a>Find a Building<br/><hr/>
+		    <a href="javascript:getMap()"><img src="getMap.png" width="128" height="128"></a>Find a Building<br/><hr/>
             
             <a href="classSchedule.html" data-ajax="false"><img src="classList.png" width="128" height="128"></a>Get My Schedule<br/><hr/>
             
@@ -46,9 +38,9 @@
        <table align="center" width="300" border="0" cellspacing="0" cellpadding="0">
   <tr>
   	<td><img src="homeIconActive.png" width="30" height="30"></td>
-    <td> <a target="_self" href="getMapx.html" target="_blank"><img src="getMapIcon.png" width="30" height="30"></a></td>
-    <td><a target="_self" href="classSchedule.html" target="_blank"><img src="classListIcon.png" width="30" height="30"></a></td>
-    <td><a target="_self" href="selectClasses.html" target="_blank"><img src="searchClassIcon.png" width="30" height="30"></a>
+    <td> <a target="_self" href="getMapx.html"><img src="getMapIcon.png" width="30" height="30"></a></td>
+    <td><a target="_self" href="classSchedule.html"><img src="classListIcon.png" width="30" height="30"></a></td>
+    <td><a target="_self" href="selectClasses.html"><img src="searchClassIcon.png" width="30" height="30"></a>
       </td>
   </tr>
   <tr>
