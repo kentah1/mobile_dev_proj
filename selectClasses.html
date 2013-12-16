@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <form name="aspnetForm" method="post" action="http://dcs.losrios.edu/dcs_classsearch.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+
+    <form name="aspnetForm" method="post" action="http://dcs.losrios.edu/dcs_classsearch.aspx"  id="aspnetForm">
 <div>
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
@@ -70,7 +71,7 @@ return true;
 
 	</select>
                     </dd>
-                    <dt class="Col2">Enrollment Status:</dt>
+                    <dt class="Col2">Status:</dt>
                     <dd class="Col3">
                         <select name="ctl00$cphMain$iCS" id="ctl00_cphMain_iCS">
 		<option selected="selected" value="All">All Classes</option>
@@ -90,7 +91,7 @@ return true;
 		<option value="SCC">Sacramento City College</option>
 
 	</select>
-                        <span id="ctl00_cphMain_rfvC" class="Error" style="color:Red;visibility:hidden;">*</span>
+  
                     </dd>
                     <dt class="First Col0">* Subject:</dt>
                     <dd class="Full">
@@ -262,11 +263,9 @@ return true;
 		<option value="WEXP">Work Experience (WEXP)</option>
 
 	</select>
-                        <span id="ctl00_cphMain_rfvSu" class="Error" style="color:Red;visibility:hidden;">*</span>
+ 
                     </dd>
-                </dl>
-                
-                
+                </dl> 
                 <dl class="dlOptional">
                     <dt class="First Col0">Days:</dt>
                     <dd class="Col1">
