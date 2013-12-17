@@ -17,19 +17,23 @@ function initialize() {
         zoom: 18,
         center: sfLatlng,
 		streetViewControl: false,
-		panControl:true,
+		panControl:false,
 zoomControl:false,
 mapTypeControl:false,
 scaleControl:false,
 overviewMapControl:false,
-rotateControl:true,
+rotateControl:false,
         mapTypeId: google.maps.MapTypeId.SATELLITE
     };
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-    var marker = new google.maps.Marker({
+    var marker = new MarkerWithLabel({
         position: sfLatlng,
         animation: google.maps.Animation.DROP,
-        map: map
+        map: map,
+		labelContent: "FL" + passedBldg,
+		labelAnchor: new google.maps.Point(16, 0),
+        labelClass: "h6", // the CSS class for the label
+        labelStyle: {opacity: 1}
     });
  // If able to get location put location marker for current location
   if(navigator.geolocation) {
@@ -74,6 +78,24 @@ function pickMap(buildingNumber) {
         break;
     case 6:
         sfLatlng = new google.maps.LatLng(38.66215, -121.126733);
+        break;    
+	case 7:
+        sfLatlng = new google.maps.LatLng(38.661654, -121.126544);
+        break;
+    case 8:
+        sfLatlng = new google.maps.LatLng(38.661774, -121.125958);
+        break;
+    case 9:
+        sfLatlng = new google.maps.LatLng(38.660655, -121.127438);
+        break;
+    case 10:
+        sfLatlng = new google.maps.LatLng(38.662465, -121.129537);
+        break;
+    case 11:
+        sfLatlng = new google.maps.LatLng(38.662551, -121.127348);
+        break;
+    case 12:
+        sfLatlng = new google.maps.LatLng(38.660918, -121.12331);
         break;
     default:
         sfLatlng = new google.maps.LatLng(38.661583, -121.127394);

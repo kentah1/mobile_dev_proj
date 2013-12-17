@@ -37,17 +37,17 @@
 }
 .hlogo {
 	text-align:left;
-	vertical-align:middle;
-	font-size:22px;
+	font-size:24px;
 	position:fixed;
 	margin-left:10px;
 }
+
 /* Globals */
 /* Font
 -----------------------------------------------------------------------------------------------------------*/
 html {
 	font-size: 100%;
-	height: 100%;
+	height: auto;
 }
 body,
 input,
@@ -71,13 +71,18 @@ table {
 }
 dt {
 	float:left;
+	margin-left:auto; 
+    margin-right:auto;
+	padding:5px;
 }
 
 dd {
-	width:80%;
-	padding-left:110px;
+	width:auto;
+	padding-left:90px;
 }
-
+h6 {
+	color:#ff0;
+}
 
 legend,
 .ui-input-text input,
