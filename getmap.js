@@ -10,7 +10,7 @@ if (urlString.length > 0) {
 	window.localStorage.setItem("buildingNum",passedBldg);
 }
 //if it is null then have the user enter it
-if (passedBldg === "") {
+if (passedBldg.length < 1) {
 	getBuilding();
 	passedBldg = window.localStorage.getItem("buildingNum");
 }
