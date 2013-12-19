@@ -1,7 +1,14 @@
 window.onload = function() {
 var sfLatlng, map, passedURL, passedBldg;
 //get the building number to use
+var urlString = location.search;
 passedBldg = window.localStorage.getItem("buildingNum");
+//if it came from a class schedule link - get it in the right format
+if (urlString.length > 0) {
+	passedBldg = urlString;
+	passedBldg = passedBldg.replace( /^\D+/g, ''); //strip the junk
+	window.localStorage.setItem("buildingNum",passedBldg);
+}
 //if it is null then have the user enter it
 if (passedBldg === "") {
 	getBuilding();

@@ -78,7 +78,7 @@ function getClasses() {
 					row++;
 					var tr = classTable.appendChild(document.createElement('tr'));  //add second row
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
-					cell[key * row].innerHTML = "Building: "+(classInfo[indexID].building).trim() + ",&nbsp;  " + classInfo[indexID].days + "&nbsp;   " + classInfo[indexID].time;
+					cell[key * row].innerHTML = "Building: <a target='_self' href = getMapx.html?build=" + (classInfo[indexID].building).trim() + ">"+(classInfo[indexID].building).trim() + "</a>,&nbsp;  " + classInfo[indexID].days + "&nbsp;   " + classInfo[indexID].time;
 					var tr = classTable.appendChild(document.createElement('tr'));  //add third row
                     tr.setAttribute("class", "table-line");
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
