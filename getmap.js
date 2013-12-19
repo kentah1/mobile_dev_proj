@@ -105,8 +105,10 @@ function pickMap(buildingNumber) {
 }
 		function getBuilding() {
 			var buildingNum  = prompt("Enter Building to Find","");
+			if (buildingNum != null) {
 			//if it has letters, (like FL) strip them off
-			buildingNum = buildingNum.replace( /^\D+/g, '');
+				buildingNum = buildingNum.replace( /^\D+/g, '');
+			}
 			if (buildingNum > 0 && buildingNum < 13) {
 				 window.localStorage.setItem("buildingNum",buildingNum);
 				return;

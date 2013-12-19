@@ -60,7 +60,8 @@ button,
 	  font-family: trajan, "Droid Serif", "Times New Roman",Times,serif; /*{global-font-family}*/
 }
 body {
-	height:100%;
+	height:90%;
+	width:auto;
 }
 table {
 	margin:5px;
