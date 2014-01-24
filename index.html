@@ -13,13 +13,23 @@
 	</head>
 	<body>
 		<script>
+		//get the JSON student file
+		
 		 var studentInfo;
-	     $.getJSON( "Students.json", function(data) {
+	     $.ajax({
+			 type : 'GET',
+			 url: 'Students.json',
+			 async: false,
+			 jsonCallback: 'jsonCallback',
+			 contentType: 'applicaton/json',
+			 dataType: 'json',
+			 success: function(data) {
              studentInfo = data.students;
-         })
-         .fail(function() {
-         console.log( "Error getting JSON file" );
-         })
+         },
+		 error: function() {
+         console.log("Error opening student file");
+		 }
+         });
 	//check for valid username/password
 	function validateUser () {
 		for(index = 0; index < studentInfo.length; index++) {

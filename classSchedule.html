@@ -78,7 +78,7 @@ function getClasses() {
 					row++;
 					var tr = classTable.appendChild(document.createElement('tr'));  //add second row
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
-					cell[key * row].innerHTML = "Building: <a target='_self' href = getMapx.html?build=" + (classInfo[indexID].building).trim() + ">"+(classInfo[indexID].building).trim() + "</a>,&nbsp;  " + classInfo[indexID].days + "&nbsp;   " + classInfo[indexID].time;
+					cell[key * row].innerHTML = "Building: <a target='_self' href = getMap.html?build=" + (classInfo[indexID].building).trim() + ">"+(classInfo[indexID].building).trim() + "</a>,&nbsp;  " + classInfo[indexID].days + "&nbsp;   " + classInfo[indexID].time;
 					var tr = classTable.appendChild(document.createElement('tr'));  //add third row
                     tr.setAttribute("class", "table-line");
 					cell[key * row] = tr.appendChild(document.createElement('td'));  //add column
@@ -138,9 +138,9 @@ function createTable() {
        <table align="center" width="300" border="0" cellspacing="0" cellpadding="0">
   <tr>
   	<td><a target="_self" href="home.html"><img src="homeIcon.png" width="30" height="30"></a></td>
-    <td> <a target="_self" href="getMapx.html"><img src="getMapIcon.png" width="30" height="30"></a></td>
+    <td> <a target="_self" href="getMap.html"><img src="getMapIcon.png" width="30" height="30"></a></td>
     <td><img src="classListIconActive.png" width="30" height="30"></td>
-    <td><a target="_self" href="selectClasses.html"><img src="searchClassIcon.png" width="30" height="30"></a>
+    <td><a target="_self" href="showClasses.html"><img src="searchClassIcon.png" width="30" height="30"></a>
       </td>
   </tr>
   <tr>
