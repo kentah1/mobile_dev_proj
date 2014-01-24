@@ -3,6 +3,7 @@ var sfLatlng, map, passedURL, passedBldg;
 //get the building number to use
 var urlString = location.search;
 passedBldg = window.localStorage.getItem("buildingNum");
+
 //if it came from a class schedule link - get it in the right format
 if (urlString.length > 0) {
 	passedBldg = urlString;
@@ -10,7 +11,7 @@ if (urlString.length > 0) {
 	window.localStorage.setItem("buildingNum",passedBldg);
 }
 //if it is null then have the user enter it
-if (passedBldg.length < 1) {
+if (passedBldg == null) {
 	getBuilding();
 	passedBldg = window.localStorage.getItem("buildingNum");
 }
@@ -25,11 +26,11 @@ function initialize() {
         center: sfLatlng,
 		streetViewControl: false,
 		panControl:false,
-zoomControl:false,
-mapTypeControl:false,
-scaleControl:false,
-overviewMapControl:false,
-rotateControl:false,
+        zoomControl:false,
+        mapTypeControl:false,
+        scaleControl:false,
+        overviewMapControl:false,
+        rotateControl:false,
         mapTypeId: google.maps.MapTypeId.SATELLITE
     };
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
