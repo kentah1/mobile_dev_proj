@@ -13,7 +13,7 @@
         
  <script>
  function getMap() {
- //set the building number to zero so the map will always ask for the number if we come thru home
+ //set the building number to null so the map will always ask for the number if we come thru home
     window.localStorage.setItem("buildingNum","");
     window.location="getMap.html";
  }
@@ -39,7 +39,7 @@
        <table align="center" width="300" border="0" cellspacing="0" cellpadding="0">
   <tr>
   	<td><img src="homeIconActive.png" width="30" height="30"></td>
-    <td> <a target="_self" href="getMap.html"><img src="getMapIcon.png" width="30" height="30"></a></td>
+    <td> <a target="_self" href="javascript:getMap()"><img src="getMapIcon.png" width="30" height="30"></a></td>
     <td><a target="_self" href="classSchedule.html"><img src="classListIcon.png" width="30" height="30"></a></td>
     <td><a target="_self" href="showClasses.html"><img src="searchClassIcon.png" width="30" height="30"></a>
       </td>

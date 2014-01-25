@@ -96,6 +96,7 @@ iframe {
 	position:relative; 
 	height:100%; 
 	width:100%;
+	-webkit-user-select: text; 
 }
 
 legend,
