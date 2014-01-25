@@ -33,7 +33,7 @@
 	//check for valid username/password
 	function validateUser () {
 		for(index = 0; index < studentInfo.length; index++) {
-			if(studentInfo[index].studentID == username.value && studentInfo[index].psw == password.value ) { 
+			if(studentInfo[index].studentID === username.value.toUpperCase() && studentInfo[index].psw === password.value ) { 
 				window.localStorage.setItem("studentID", username.value);
 				window.location = "home.html";
 				return;
