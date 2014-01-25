@@ -35,7 +35,8 @@
 		for(index = 0; index < studentInfo.length; index++) {
 			if(studentInfo[index].studentID === username.value.toUpperCase() && studentInfo[index].psw === password.value ) { 
 				window.localStorage.setItem("studentID", username.value);
-				window.location = "./home.html";
+				$.mobile.changePage("home.html");
+				//window.location = "./home.html";
 				return;
 			}
 		}
