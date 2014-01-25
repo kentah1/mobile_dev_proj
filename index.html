@@ -32,7 +32,6 @@
          });
 	//check for valid username/password
 	function validateUser () {
-$.ajaxSetup({ cache: true });
 		for(index = 0; index < studentInfo.length; index++) {
 			if(studentInfo[index].studentID === username.value.toUpperCase() && studentInfo[index].psw === password.value ) { 
 				window.localStorage.setItem("studentID", username.value.toUpperCase());

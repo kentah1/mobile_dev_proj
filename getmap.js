@@ -5,7 +5,7 @@ var urlString = location.search;
 passedBldg = window.localStorage.getItem("buildingNum");
 
 //if it is null then have the user enter it
-if (passedBldg === "") {
+if (passedBldg === "" || passedBldg === null) {
 	getBuilding();
 	passedBldg = window.localStorage.getItem("buildingNum");
 } else {
