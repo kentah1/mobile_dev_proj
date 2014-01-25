@@ -35,7 +35,7 @@
 		$(document).bind("mobileinit", function() { $.mobile.ajaxEnabled = false; });
 		for(index = 0; index < studentInfo.length; index++) {
 			if(studentInfo[index].studentID === username.value.toUpperCase() && studentInfo[index].psw === password.value ) { 
-				window.localStorage.setItem("studentID", username.value);
+				window.localStorage.setItem("studentID", username.value.toUpperCase());
 				//$.mobile.changePage("./home.html");
 				window.location = "home.html";
 				return;
@@ -52,7 +52,7 @@
                  <h1>Login</h1>
                
 			</div>
-		<form action="" data-ajax="false">
+		<form action="">
 				<input type="text" placeholder="Username" required id="username" />
 				<input type="password" placeholder="Password" required id="password" />
 				<input type="submit" value="Log In" onClick="validateUser()"/>
